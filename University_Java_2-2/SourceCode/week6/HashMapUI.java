@@ -11,7 +11,6 @@ import java.util.Scanner;
 import java.util.Set;
 
 class NameComparator implements Comparator<HashMap<String, Integer>> {
-
 	@Override
 	public int compare(HashMap<String, Integer> o1, HashMap<String, Integer> o2) {
 		// TODO Auto-generated method stub
@@ -19,132 +18,118 @@ class NameComparator implements Comparator<HashMap<String, Integer>> {
 	}
 }
 
-//·¹Æ÷Æ®
-//ÀÔ·ÂµÈ µ¥ÀÌÅÍ¿¡ ´ëÇØ ÀÌ¸§°ú ¼ºÀû¼øÀ¸·Î Á¤·ÄÇÏ´Â ±â´ÉÀÇ ¸Ş´º¸¦ Ãß°¡ÇÏ½Ã¿À.
-//ÀÛ¼ºÇÑ ÆÄÀÏÀº pdf ÆÄÀÏ·Î º¯È¯ÇÏ¿© °úÁ¦¹æ¿¡ ¿Ã¸®¼¼¿ä.
+//ë ˆí¬íŠ¸
+//ì…ë ¥ëœ ë°ì´í„°ì— ëŒ€í•´ ì´ë¦„ê³¼ ì„±ì ìˆœìœ¼ë¡œ ì •ë ¬í•˜ëŠ” ê¸°ëŠ¥ì˜ ë©”ë‰´ë¥¼ ì¶”ê°€í•˜ì‹œì˜¤.
+//ì‘ì„±í•œ íŒŒì¼ì€ pdf íŒŒì¼ë¡œ ë³€í™˜í•˜ì—¬ ê³¼ì œë°©ì— ì˜¬ë¦¬ì„¸ìš”.
 public class HashMapUI {
 	public static void main(String[] args) {
 		int nMenu = 0;
 		boolean bFlag = true;
 		String strName = "";
 		int nScore = 0;
-
 		Scanner scan = new Scanner(System.in);
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
-
 		while (bFlag) {
 			System.out.println("---------------------------------");
-			System.out.println("1. ¼ºÀû ÀÔ·Â");
-			System.out.println("2. ¼ºÀû »èÁ¦");
-			System.out.println("3. ¼ºÀû °Ë»ö");
-			System.out.println("4. ÀüÃ¼¼ºÀû Ãâ·Â");
-			System.out.println("5. ÀüÃ¼¼ºÀû Ãâ·Â(ÀÌ¸§¼ø)");
-			System.out.println("6. ÀüÃ¼¼ºÀû Ãâ·Â(¼ºÀû¼ø)");
-			System.out.println("0. Á¾·á");
+			System.out.println("1. ì„±ì  ì…ë ¥");
+			System.out.println("2. ì„±ì  ì‚­ì œ");
+			System.out.println("3. ì„±ì  ê²€ìƒ‰");
+			System.out.println("4. ì „ì²´ì„±ì  ì¶œë ¥");
+			System.out.println("5. ì „ì²´ì„±ì  ì¶œë ¥(ì´ë¦„ìˆœ)");
+			System.out.println("6. ì „ì²´ì„±ì  ì¶œë ¥(ì„±ì ìˆœ)");
+			System.out.println("0. ì¢…ë£Œ");
 			System.out.println("---------------------------------");
-
-			System.out.print("0 ~ 4»çÀÌÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+			System.out.print("0 ~ 4 ì‚¬ì´ì˜ ìˆ«ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
 			nMenu = Integer.parseInt(scan.nextLine());
-
 			switch (nMenu) {
-			case 0: // Á¾·á
-				System.out.println("Á¾·á");
+			case 0: // ì¢…ë£Œ
+				System.out.println("ì¢…ë£Œ");
 				bFlag = false;
 				break;
 			case 1:
-				System.out.print("ÀÌ¸§ : >> ");
+				System.out.print("ì´ë¦„ : >> ");
 				strName = scan.nextLine();
-				System.out.print("¼ºÀû : >> ");
+				System.out.print("ì„±ì  : >> ");
 				nScore = Integer.parseInt(scan.nextLine());
-				// HashMap¿¡ ÀÌ¸§°ú ¼ºÀûÀ» ÀÔ·ÂÇÑ´Ù.
+				// HashMap ì— ì´ë¦„ê³¼ ì„±ì ì„ ì…ë ¥í•œë‹¤.
 				map.put(strName, nScore);
 				break;
-
-			case 2: // ¼ºÀû »èÁ¦
-				System.out.print("ÀÌ¸§ : >> ");
+			case 2: // ì„±ì  ì‚­ì œ
+				System.out.print("ì´ë¦„ : >> ");
 				strName = scan.nextLine();
 				if (map.containsKey(strName) == true) {
 					map.remove(strName);
 				} else {
-					System.out.println("ÇØ´ç ÀÌ¸§ÀÌ Á¸ÀçÇÏÁö¾Ê½À´Ï´Ù.");
+					System.out.println("í•´ë‹¹ ì´ë¦„ì´ ì¡´ì¬í•˜ì§€ì•ŠìŠµë‹ˆë‹¤.");
 				}
 				break;
-
-			case 3: // ¼ºÀû °Ë»ö
-				System.out.print("ÀÌ¸§ : >>");
+			case 3: // ì„±ì  ê²€ìƒ‰
+				System.out.print("ì´ë¦„ : >>");
 				strName = scan.nextLine();
 				if (map.containsKey(strName) == true) {
 					nScore = map.get(strName);
-					System.out.println("ÀÌ¸§ : " + strName + ", Á¡¼ö : " + nScore);
-				}else {
-					System.out.println("ÇØ´ç ÀÌ¸§ÀÌ Á¸ÀçÇÏÁö¾Ê½À´Ï´Ù.");
+					System.out.println("ì´ë¦„ : " + strName + ", ì ìˆ˜ : " + nScore);
+				} else {
+					System.out.println("í•´ë‹¹ ì´ë¦„ì´ ì¡´ì¬í•˜ì§€ì•ŠìŠµë‹ˆë‹¤.");
 				}
 				break;
-
-			case 4: // ÀüÃ¼¼ºÀû Á¶È¸
-				// HashMap¿¡ ÀÖ´Â ¸ğµç Å°µéÀ» °¡Á®¿Í ¹è¿­¿¡ ÀúÀåÇÑ´Ù.
+			case 4: // ì „ì²´ì„±ì  ì¡°íšŒ
+				// HashMap ì— ìˆëŠ” ëª¨ë“  í‚¤ë“¤ì„ ê°€ì ¸ì™€ ë°°ì—´ì— ì €ì¥í•œë‹¤.
 				Set<String> keys = map.keySet();
 				Iterator it = keys.iterator();
-
 				while (it.hasNext()) {
 					String name = (String) it.next();
 					Integer score = map.get(name);
-					System.out.println("ÀÌ¸§ : " + name + ", ¼ºÀû : " + score);
+					System.out.println("ì´ë¦„ : " + name + ", ì„±ì  : " + score);
 				}
 				break;
-				
-			case 5: // ÀüÃ¼¼ºÀû Á¶È¸ ÀÌ¸§¼ø
-				// HashMap¿¡ ÀÖ´Â ¸ğµç Å°µéÀ» °¡Á®¿Í ¹è¿­¿¡ ÀúÀåÇÑ´Ù.
-				Iterator it3 = sortByName(map).iterator();
 
+			case 5: // ì „ì²´ì„±ì  ì¡°íšŒ ì´ë¦„ìˆœ
+				// sortByName í•¨ìˆ˜ë¥¼ ì´ìš©í•˜ì—¬ í•´ì‰¬ë§µì˜ ì„±ì ì„ ì •ë ¬í•œë¦¬ìŠ¤íŠ¸ì˜ ì´í„°ë ˆì´í„°ë¥¼ ë°›ì•„ ì¶œë ¥í•œë‹¤.
+				Iterator it3 = sortByName(map).iterator();
 				while (it3.hasNext()) {
 					String name = (String) it3.next();
 					Integer score = map.get(name);
-					System.out.println("ÀÌ¸§ : " + name + ", ¼ºÀû : " + score);
+					System.out.println("ì´ë¦„ : " + name + ", ì„±ì  : " + score);
 				}
 				break;
-				
-			case 6: // ÀüÃ¼¼ºÀû Á¶È¸ ¼ºÀû¼ø
-				// HashMap¿¡ ÀÖ´Â ¸ğµç Å°µéÀ» °¡Á®¿Í ¹è¿­¿¡ ÀúÀåÇÑ´Ù.
-				Iterator it2 = sortByGrade(map).iterator();
 
+			case 6: // ì „ì²´ì„±ì  ì¡°íšŒ ì„±ì ìˆœ
+				// sortByGrade í•¨ìˆ˜ë¥¼ ì´ìš©í•˜ì—¬ í•´ì‰¬ë§µì˜ ì„±ì ì„ ì •ë ¬í•œë¦¬ìŠ¤íŠ¸ì˜ ì´í„°ë ˆì´í„°ë¥¼ ë°›ì•„ ì¶œë ¥í•œë‹¤.
+				Iterator it2 = sortByGrade(map).iterator();
 				while (it2.hasNext()) {
 					String name = (String) it2.next();
 					Integer score = map.get(name);
-					System.out.println("ÀÌ¸§ : " + name + ", ¼ºÀû : " + score);
+					System.out.println("ì´ë¦„ : " + name + ", ì„±ì  : " + score);
 				}
 				break;
-
 			default:
-				System.out.println("0 ~ 4»çÀÌÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("0 ~ 4 ì‚¬ì´ì˜ ìˆ«ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			}
 		} // end while
 	}
 
-	// ÀÌ¸§¼øÀ¸·Î Á¤·ÄÇÏ´Â ÇÔ¼ö
+	// ì´ë¦„ìˆœìœ¼ë¡œ ì •ë ¬í•˜ëŠ” í•¨ìˆ˜
 	public static List sortByName(HashMap<String, Integer> map) {
-		// Á¤·ÄµÈ °ªµéÀÌ ´ã±æ ¹è¿­
+		// ì •ë ¬ëœ ê°’ë“¤ì´ ë‹´ê¸¸ ë°°ì—´
 		List<String> list = new ArrayList();
 		list.addAll(map.keySet());
-
-		// Á¤·ÄÇÏ±â
+		// ì •ë ¬í•˜ê¸°
 		Collections.sort(list, new Comparator() {
 			public int compare(Object o1, Object o2) {
 				return ((Comparable) o1).compareTo(o2);
 			}
 		});
-
-		// Á¤·ÄµÈ°ª ¹İÈ¯
+		// ì •ë ¬ëœê°’ ë°˜í™˜
 		return list;
 	}
 
-	// ¼ºÀû¼øÀ¸·Î Á¤·ÄÇÏ´ÂÇÔ¼ö
+	// ì„±ì ìˆœìœ¼ë¡œ ì •ë ¬í•˜ëŠ”í•¨ìˆ˜
 	public static List sortByGrade(HashMap<String, Integer> map) {
-		// Á¤·ÄµÈ °ªµéÀÌ ´ã±æ ¹è¿­
+		// ì •ë ¬ëœ ê°’ë“¤ì´ ë‹´ê¸¸ ë°°ì—´
 		List<String> list = new ArrayList();
 		list.addAll(map.keySet());
-
-		// Á¤·Ä ÇÔ¼ö »ı¼º
+		// ì •ë ¬í•˜ê¸°
 		Collections.sort(list, new Comparator() {
 			public int compare(Object o1, Object o2) {
 				return map.get(o1) - map.get(o2);
@@ -153,5 +138,4 @@ public class HashMapUI {
 		Collections.reverse(list);
 		return list;
 	}
-
 }
