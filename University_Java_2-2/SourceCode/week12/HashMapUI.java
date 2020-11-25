@@ -122,7 +122,7 @@ public class HashMapUI {
 				}
 				break;
 			case 7: // 저장하기
-				
+				//Grade.txt 파일에서 파일 저장하기
 				OutputStream out = new FileOutputStream("Grade.txt");
 				BufferedOutputStream bos= new BufferedOutputStream(out);
 				ObjectOutputStream oos = new ObjectOutputStream(bos);
@@ -135,11 +135,13 @@ public class HashMapUI {
 				
 				break;
 			case 8: // 불러오기
+				//Grade.txt 파일에서 파일 가져오기
 				InputStream in = new FileInputStream("Grade.txt");
 				BufferedInputStream bis = new BufferedInputStream(in);
 				ObjectInputStream ois = new ObjectInputStream(bis);		
 				
 				HashMap<String, Integer> list = (HashMap<String, Integer>)ois.readObject();
+				//가져온 정보를 map에 추가하기
 				map.putAll(list);
 				System.out.println(map);
 				
