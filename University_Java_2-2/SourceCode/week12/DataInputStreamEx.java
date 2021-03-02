@@ -8,10 +8,10 @@ import java.io.InputStream;
 
 public class DataInputStreamEx {
 	public static void main(String[] args) throws Exception {
-		// FileInputStream fis = new FileInputStream("data.txt");
+		//FileInputStream fis = new FileInputStream("data.txt");
 		InputStream fin = new FileInputStream("data.txt");
-		BufferedInputStream fis = new BufferedInputStream(fin);
-		DataInputStream dis = new DataInputStream(fis);
+		BufferedInputStream bis = new BufferedInputStream(fin);
+		DataInputStream dis = new DataInputStream(bis);
 
 		int a = 0;
 		double b = 0.0;
@@ -27,7 +27,7 @@ public class DataInputStreamEx {
 		System.out.println("c : " + new String(c));
 
 		dis.close();
-		fis.close();
+		bis.close();
 		fin.close();
 		
 	}

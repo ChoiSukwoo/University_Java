@@ -33,7 +33,7 @@ public class BorderLayoutEx1 extends JFrame {
 
 	// 기본 디자인 함수
 	public void formDesign() {
-		this.setLayout(new BorderLayout(10,10));
+		this.setLayout(new BorderLayout(10,20));
 		this.add(btn1,BorderLayout.NORTH);
 		this.add(btn2,BorderLayout.SOUTH);
 		this.add(btn3,BorderLayout.WEST);

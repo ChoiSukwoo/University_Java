@@ -9,6 +9,7 @@ public class ArrayListEx {
 		list.add("Lee");
 		list.add("Kim");
 		list.add("Park");
+	
 		
 		System.out.println(list);
 		

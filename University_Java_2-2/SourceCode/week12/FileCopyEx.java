@@ -5,8 +5,8 @@ import java.io.FileOutputStream;
 
 public class FileCopyEx {
 	public static void main(String[] args) throws Exception {
-		FileInputStream fis = new FileInputStream("C:\\Temp\\test.png");
-		FileOutputStream fos = new FileOutputStream("copy.png");
+		FileInputStream fis = new FileInputStream("C:\\Temp\\test.jpg");
+		FileOutputStream fos = new FileOutputStream("copy.jpg");
 		
 		long start = System.currentTimeMillis();
 		while(true) {

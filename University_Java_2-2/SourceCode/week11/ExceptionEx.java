@@ -1,6 +1,6 @@
 package week11;
 
-//¿¹¿ÜÃ³¸®
+//ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½
 public class ExceptionEx {
 	public static void main(String[] args) {
 		try {
@@ -11,9 +11,9 @@ public class ExceptionEx {
 			arr[2] = 30;
 //			arr[3] = 100;
 		} catch (Exception e) {
-			System.out.println("¹è¿­¿À·ù");			 
+			System.out.println("ì„±ê³µ");			 
 		}
-		System.out.println("Á¤»óÁ¾·á");
+		System.out.println("ì‹¤íŒ¨");
 
 	}
 }

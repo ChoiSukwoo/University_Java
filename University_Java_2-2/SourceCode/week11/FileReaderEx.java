@@ -7,16 +7,16 @@ import java.io.FileWriter;
 public class FileReaderEx {
 	public static void main(String[] args) throws Exception {
 
-		// 1)¿Ã¹Ù¸¥ ÀÔÃâ·Â ½ºÆ®¸² Ãß°¡
+		// 1ì˜¬ë°”ë¥¸ ìŠ¤íŠ¸ë¦¼ ì—°ê²°
 		// byte - inputstream - fileinputstream
 
 		FileReader fin = null;
-		FileWriter fw = new FileWriter("copy.txt");
+		FileWriter fw = new FileWriter("Copy.txt");
 
 		// FileInputStream fin = new FileInputStream("C:\\Temp\\test.txt");
 
-		fin = new FileReader("C:\\Temp\\test.txt");
-		// Ãâ·ÂÇÏ±â
+		fin = new FileReader("C:\\Temp\\text.txt");
+		// ï¿½ï¿½ï¿½ï¿½Ï±ï¿½
 		while (true) {
 			int data = fin.read();
 			if (data == -1) {break;}
@@ -25,7 +25,7 @@ public class FileReaderEx {
 			fw.write(data);
 		}
 
-		// 3) ´Ý±â
+		// 3) ï¿½Ý±ï¿½
 		fin.close();
 		fw.close();
 	}

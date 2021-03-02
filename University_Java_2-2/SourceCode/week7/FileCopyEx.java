@@ -6,15 +6,15 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 
-//c:\\Temp\\aaa.txt ÆÄÀÏÀ» ÇöÀç À§Ä¡¿¡ copy.text
-//¹ÙÀÌÆ® / ¹®ÀÚ
-// ¿©±â¼­´Â ¿¹¿Ü¸¦ Ã³¸®ÇÏÁö¾Ê°í Àü°¡
-//Exception = IOException - FileNotFound Exception
+//c:\\Temp\\aaa.txt ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ copy.text
+//ï¿½ï¿½ï¿½ï¿½Æ® / ï¿½ï¿½ï¿½ï¿½
+// ï¿½ï¿½ï¿½â¼­ï¿½ï¿½ ï¿½ï¿½ï¿½Ü¸ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê°ï¿½ ï¿½ï¿½ï¿½ï¿½
+//Exception = IOException - FileNotFound Exception 
 
 public class FileCopyEx {
 	public static void main(String[] args) throws Exception {
 		
-		//1.ÀûÀýÇÑ ÀåÄ¡¿¬°á = ½ºÆ®¸² ¼±Á¤
+		//1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ = ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		InputStream in = null;
 		OutputStream out = null;
 

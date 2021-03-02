@@ -1,7 +1,5 @@
 package week11;
 
-import java.io.Serializable;
-
 public class PlayerVO implements Comparable<PlayerVO> {
 
 	private String name;
